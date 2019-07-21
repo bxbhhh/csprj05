@@ -1,0 +1,4 @@
+gcc -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -Wstrict-prototypes -Wredundant-decls -Wall -Wundef -Wwrite-strings -Wmissing-prototypes -fno-strict-aliasing -c -o /tmp/qemu-conf-2199-3848-30696.o /tmp/qemu-conf-29708-3848-31982.c
+/tmp/qemu-conf-29708-3848-31982.c:2:2: 错误： #error Not defined
+gcc -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -Wstrict-prototypes -Wredundant-decls -Wall -Wundef -Wwrite-strings -Wmissing-prototypes -fno-strict-aliasing -c -o /tmp/qemu-conf-2199-3848-30696.o /tmp/qemu-conf-29708-3848-31982.c
+gcc -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -Wstrict-prototypes -Wredundant-decls -Wall -Wundef -Wwrite-strings -Wmissing-prototypes -fno-strict-aliasing -c -o /tmp/qemu-conf-2199-3848-30696.o /tmp/qemu-conf-29708-3848-31982.c

@@ -1,0 +1,173 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Jul 19 19:42:59 2019
+| Host         : DESKTOP-2QEVIEC running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file thinpad_top_control_sets_placed.rpt
+| Design       : thinpad_top
+| Device       : xc7a100t
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |   100 |
+| Unused register locations in slices containing registers |   205 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            4 |
+|      2 |            2 |
+|      4 |            2 |
+|      6 |            1 |
+|      7 |            1 |
+|      8 |            3 |
+|      9 |            1 |
+|     11 |            3 |
+|     12 |            1 |
+|    16+ |           82 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             127 |           67 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             618 |          279 |
+| Yes          | No                    | No                     |             768 |          238 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |            2114 |         1090 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------------------------+-----------------------------------------------------+---------------------------------------------+------------------+----------------+
+|                     Clock Signal                     |                    Enable Signal                    |               Set/Reset Signal              | Slice Load Count | Bel Load Count |
++------------------------------------------------------+-----------------------------------------------------+---------------------------------------------+------------------+----------------+
+|  clock_gen/inst/clk_out1                             | vga800x600at75/vdata[11]_i_2_n_7                    |                                             |                1 |              1 |
+|  ext_uart_r/CLK                                      |                                                     |                                             |                1 |              1 |
+|  clock_gen/inst/clk_out2                             | ext_uart_r/tickgen/OversamplingTick                 |                                             |                1 |              1 |
+|  openmips0/ex_mem0/pause_for_store_reg_0             |                                                     |                                             |                1 |              1 |
+|                                                      |                                                     | reset_btn_IBUF                              |                1 |              2 |
+|  openmips0/mem_wb0/wb_cp0_reg_write_addr_reg[3]_0[0] |                                                     | reset_btn_IBUF                              |                1 |              2 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_cp0_reg_write_addr_reg[2]_1    | reset_btn_IBUF                              |                3 |              4 |
+|  clock_gen/inst/clk_out2                             | openmips0/ex_mem0/mem_excepttype_reg[10]_0          | reset_btn_IBUF                              |                3 |              4 |
+|  clock_gen/inst/clk_out2                             | openmips0/ex_mem0/FSM_sequential_state_reg[1][0]    | reset_btn_IBUF                              |                2 |              6 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_cp0_reg_we_reg_0[0]            | reset_btn_IBUF                              |                3 |              7 |
+|  clock_gen/inst/clk_out2                             | ext_uart_t/tickgen/Acc_reg[21]_0[0]                 |                                             |                2 |              8 |
+|  clock_gen/inst/clk_out2                             | ext_uart_r/tickgen/FSM_onehot_RxD_state_reg[3][0]   |                                             |                1 |              8 |
+|  ext_uart_r/CLK                                      | openmips0/pc_reg0/reset_btn[0]                      |                                             |                1 |              8 |
+|  clock_gen/inst/clk_out2                             | openmips0/ex_mem0/E[0]                              | reset_btn_IBUF                              |                2 |              9 |
+|  clock_gen/inst/clk_out1                             | vga800x600at75/vdata[11]_i_2_n_7                    | vga800x600at75/vdata[11]_i_1_n_7            |                3 |             11 |
+|  clock_gen/inst/clk_out2                             | ext_uart_r/tickgen/E[0]                             |                                             |                2 |             11 |
+|  clock_gen/inst/clk_out2                             | ext_uart_t/tickgen/E[0]                             |                                             |                2 |             11 |
+|  clock_gen/inst/clk_out1                             |                                                     | vga800x600at75/hdata[11]_i_1_n_7            |                4 |             12 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_cp0_reg_write_addr_reg[0]_4[0] | reset_btn_IBUF                              |               10 |             16 |
+|  clock_gen/inst/clk_out1                             |                                                     |                                             |               11 |             18 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_cp0_reg_write_addr_reg[1]_1[0] | reset_btn_IBUF                              |                9 |             18 |
+|  clock_gen/inst/clk_out1                             | vga800x600at75/video_de_OBUF                        | vga800x600at75/addr0                        |                5 |             19 |
+|  clock_gen/inst/clk_out2                             |                                                     | ext_uart_t/FSM_onehot_TxD_state_reg[0]_0[0] |                7 |             22 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_cp0_reg_write_addr_reg[1]_2[0] | reset_btn_IBUF                              |                9 |             26 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_cp0_reg_write_addr_reg[1]_3[0] | reset_btn_IBUF                              |               11 |             26 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_cp0_reg_write_addr_reg[2]_2[0] | reset_btn_IBUF                              |               10 |             27 |
+|  clock_gen/inst/clk_out2                             |                                                     | openmips0/ex_mem0/reset_btn_1[0]            |               25 |             31 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_cp0_reg_write_addr_reg[0]_3    | reset_btn_IBUF                              |               13 |             31 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_wd_reg[2]_5                    | reset_btn_IBUF                              |               15 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_wd_reg[2]_3                    | reset_btn_IBUF                              |               19 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_wd_reg[0]_2                    | reset_btn_IBUF                              |               19 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_cp0_reg_write_addr_reg[0]_2[0] | reset_btn_IBUF                              |               10 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_cp0_reg_write_addr_reg[3]_1[0] | reset_btn_IBUF                              |               19 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_wd_reg[2]_1                    | reset_btn_IBUF                              |               16 |             32 |
+|  clock_gen/inst/clk_out2                             | reset_btn_IBUF                                      | reset_btn_IBUF                              |               24 |             32 |
+|  n_2_286_BUFG                                        |                                                     | reset_btn_IBUF                              |               17 |             32 |
+|  n_3_228_BUFG                                        |                                                     | reset_btn_IBUF                              |               15 |             32 |
+|  n_4_3221_BUFG                                       |                                                     | reset_btn_IBUF                              |               19 |             32 |
+|  n_5_3658_BUFG                                       |                                                     | reset_btn_IBUF                              |               12 |             32 |
+|  n_6_4051_BUFG                                       |                                                     | reset_btn_IBUF                              |               16 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/div0/dividend[31]_i_1_n_7                 | reset_btn_IBUF                              |               16 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/div0/dividend[64]_i_1_n_7                 | reset_btn_IBUF                              |                9 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/div0/divisor                              | reset_btn_IBUF                              |                8 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_wd_reg[3]_5                    | reset_btn_IBUF                              |               22 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/ex_mem0/mem_excepttype_reg[10]_2[0]       | reset_btn_IBUF                              |               23 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/ex_mem0/virtual_pc[31]_i_5_0[0]           | openmips0/pc_reg0/virtual_pc[31]_i_1_n_7    |               12 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/ex_mem0/virtual_pc[31]_i_5_1[0]           | openmips0/ex_mem0/SR[0]                     |               18 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_wd_reg[4]_2                    | reset_btn_IBUF                              |               18 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_wd_reg[4]_1                    | reset_btn_IBUF                              |               21 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_wd_reg[4]_0                    | reset_btn_IBUF                              |               22 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_wd_reg[2]_4                    | reset_btn_IBUF                              |               16 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_wd_reg[3]_4                    | reset_btn_IBUF                              |               16 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_wd_reg[3]_6                    | reset_btn_IBUF                              |               25 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_wd_reg[2]_6                    | reset_btn_IBUF                              |               21 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_wd_reg[0]_0                    | reset_btn_IBUF                              |               15 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_wd_reg[0]_3                    | reset_btn_IBUF                              |               22 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_wd_reg[0]_5                    | reset_btn_IBUF                              |               19 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_wd_reg[2]_2                    | reset_btn_IBUF                              |               18 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_wd_reg[0]_1                    | reset_btn_IBUF                              |               19 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_wd_reg[3]_2                    | reset_btn_IBUF                              |               14 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_wd_reg[3]_3                    | reset_btn_IBUF                              |               15 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_wd_reg[1]_0                    | reset_btn_IBUF                              |               21 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_wd_reg[1]_1                    | reset_btn_IBUF                              |               18 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_wd_reg[3]_0                    | reset_btn_IBUF                              |               21 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_wd_reg[2]_0                    | reset_btn_IBUF                              |               20 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_wd_reg[3]_1                    | reset_btn_IBUF                              |               22 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_wd_reg[1]_5                    | reset_btn_IBUF                              |               13 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_wd_reg[0]_4                    | reset_btn_IBUF                              |               19 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_wd_reg[1]_3                    | reset_btn_IBUF                              |               18 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_wd_reg[1]_4                    | reset_btn_IBUF                              |               17 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_wd_reg[1]_2                    | reset_btn_IBUF                              |               23 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_wd_reg[1]_6                    | reset_btn_IBUF                              |               17 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/wb_wd_reg[0]_6                    | reset_btn_IBUF                              |               20 |             32 |
+|  clock_gen/inst/clk_out2                             | openmips0/ex_mem0/virtual_pc[31]_i_5_1[0]           | openmips0/ex_mem0/reset_btn_2[0]            |               14 |             33 |
+|  clock_gen/inst/clk_out2                             |                                                     |                                             |               16 |             43 |
+|  clock_gen/inst/clk_out2                             | openmips0/cp0_reg0/index_o_reg[1]_2[0]              |                                             |               16 |             45 |
+|  clock_gen/inst/clk_out2                             | openmips0/cp0_reg0/index_o_reg[0]_0[0]              |                                             |               16 |             45 |
+|  clock_gen/inst/clk_out2                             | openmips0/cp0_reg0/index_o_reg[0]_1[0]              |                                             |               11 |             45 |
+|  clock_gen/inst/clk_out2                             | openmips0/cp0_reg0/index_o_reg[0]_2[0]              |                                             |               14 |             45 |
+|  clock_gen/inst/clk_out2                             | openmips0/cp0_reg0/index_o_reg[0]_3[0]              |                                             |               13 |             45 |
+|  clock_gen/inst/clk_out2                             | openmips0/cp0_reg0/index_o_reg[0]_4[0]              |                                             |               13 |             45 |
+|  clock_gen/inst/clk_out2                             | openmips0/cp0_reg0/index_o_reg[1]_0[0]              |                                             |               14 |             45 |
+|  clock_gen/inst/clk_out2                             | openmips0/cp0_reg0/E[0]                             |                                             |               19 |             45 |
+|  clock_gen/inst/clk_out2                             | openmips0/cp0_reg0/wb_inst_reg[2][0]                |                                             |               11 |             45 |
+|  clock_gen/inst/clk_out2                             | openmips0/cp0_reg0/index_o_reg[1]_3[0]              |                                             |               15 |             45 |
+|  clock_gen/inst/clk_out2                             | openmips0/cp0_reg0/index_o_reg[1]_5[0]              |                                             |               15 |             45 |
+|  clock_gen/inst/clk_out2                             | openmips0/cp0_reg0/index_o_reg[1]_4[0]              |                                             |               13 |             45 |
+|  clock_gen/inst/clk_out2                             | openmips0/cp0_reg0/index_o_reg[1]_1[0]              |                                             |               15 |             45 |
+|  clock_gen/inst/clk_out2                             | openmips0/cp0_reg0/wb_inst_reg[2]_2[0]              |                                             |               16 |             45 |
+|  clock_gen/inst/clk_out2                             | openmips0/cp0_reg0/wb_inst_reg[2]_0[0]              |                                             |               15 |             45 |
+|  clock_gen/inst/clk_out2                             | openmips0/cp0_reg0/wb_inst_reg[2]_1[0]              |                                             |               12 |             45 |
+|  n_1_1772_BUFG                                       |                                                     |                                             |               38 |             64 |
+|  clock_gen/inst/clk_out2                             | openmips0/mem_wb0/E[0]                              | reset_btn_IBUF                              |               41 |             64 |
+|  clock_gen/inst/clk_out2                             | openmips0/div0/result_o[63]_i_1_n_7                 | reset_btn_IBUF                              |               24 |             65 |
+|  clock_gen/inst/clk_out2                             |                                                     | openmips0/ex_mem0/hilo_o[63]_i_1_n_7        |               15 |             66 |
+|  n_0_1925_BUFG                                       |                                                     | reset_btn_IBUF                              |               36 |             66 |
+|  clock_gen/inst/clk_out2                             |                                                     | reset_btn_IBUF                              |               28 |             82 |
+|  clock_gen/inst/clk_out2                             |                                                     | openmips0/ex_mem0/pause_for_store_reg_1     |               83 |            175 |
+|  clock_gen/inst/clk_out2                             | openmips0/ex_mem0/virtual_pc[31]_i_5_1[0]           | openmips0/ex_mem0/reset_btn_0[0]            |               74 |            184 |
+|  clock_gen/inst/clk_out2                             | openmips0/ex_mem0/p_0_in                            | openmips0/ex_mem0/mem_wd[4]_i_1_n_7         |              134 |            284 |
++------------------------------------------------------+-----------------------------------------------------+---------------------------------------------+------------------+----------------+
+
+
