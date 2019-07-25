@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Jul 22 07:45:49 2019
+# Process ID: 12696
+# Current directory: C:/Users/bry_0/Desktop/csprj05
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3640 C:\Users\bry_0\Desktop\csprj05\thinpad_top.xpr
+# Log file: C:/Users/bry_0/Desktop/csprj05/vivado.log
+# Journal file: C:/Users/bry_0/Desktop/csprj05\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/bry_0/Desktop/csprj05/thinpad_top.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/bry_0/Desktop/mips32-cpu' since last save.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'C:/Users/bry_0/Desktop/csprj05/thinpad_top.srcs/sources_1/new/cpu/memory.v', nor could it be found using path 'C:/Users/bry_0/Desktop/mips32-cpu/thinpad_top.srcs/sources_1/new/cpu/memory.v'.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'C:/Users/bry_0/Desktop/csprj05/thinpad_top.srcs/sources_1/new/main.bin', nor could it be found using path 'C:/Users/bry_0/Desktop/mips32-cpu/thinpad_top.srcs/sources_1/new/main.bin'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:13 . Memory (MB): peak = 697.086 ; gain = 139.285
+update_compile_order -fileset sources_1
+reset_run impl_1
+launch_runs impl_1 -jobs 2
+[Mon Jul 22 07:47:02 2019] Launched impl_1...
+Run output will be captured here: C:/Users/bry_0/Desktop/csprj05/thinpad_top.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Mon Jul 22 07:56:06 2019] Launched impl_1...
+Run output will be captured here: C:/Users/bry_0/Desktop/csprj05/thinpad_top.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Jul 22 13:01:11 2019...

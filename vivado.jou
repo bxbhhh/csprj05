@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Jul 22 07:45:49 2019
+# Process ID: 12696
+# Current directory: C:/Users/bry_0/Desktop/csprj05
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3640 C:\Users\bry_0\Desktop\csprj05\thinpad_top.xpr
+# Log file: C:/Users/bry_0/Desktop/csprj05/vivado.log
+# Journal file: C:/Users/bry_0/Desktop/csprj05\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/bry_0/Desktop/csprj05/thinpad_top.xpr
+update_compile_order -fileset sources_1
+reset_run impl_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
